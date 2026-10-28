@@ -58,6 +58,7 @@ A circuit is a reusable setup for a set of hosts, versioned like any OpenTofu mo
 | [circuit-caddy](https://github.com/conn3xorg/circuit-caddy) | Caddy as a web server or reverse proxy, from a map of sites |
 | [circuit-postgres](https://github.com/conn3xorg/circuit-postgres) | PostgreSQL with settings, access rules, users and databases |
 | [circuit-podman](https://github.com/conn3xorg/circuit-podman) | Podman, with your containers run as systemd services through Quadlet |
+| [circuit-microshift](https://github.com/conn3xorg/circuit-microshift) | Single-node MicroShift from the microshift-io community build. Rocky Linux 10 only, tested by hand |
 | [circuit-tailscale](https://github.com/conn3xorg/circuit-tailscale) | Tailscale, joined to your tailnet, with routes and exit nodes |
 | [circuit-fail2ban](https://github.com/conn3xorg/circuit-fail2ban) | Bans repeated SSH login failures, plus jails of your own |
 | [circuit-auto-updates](https://github.com/conn3xorg/circuit-auto-updates) | Automatic package updates with a reboot window |
