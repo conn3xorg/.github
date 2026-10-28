@@ -55,6 +55,12 @@ A circuit is a reusable setup for a set of hosts, versioned like any OpenTofu mo
 | [circuit-users](https://github.com/conn3xorg/circuit-users) | Users, groups, SSH keys and sudo from one map |
 | [circuit-nginx](https://github.com/conn3xorg/circuit-nginx) | nginx with a site, a reload handler and an open firewall port |
 | [circuit-node-exporter](https://github.com/conn3xorg/circuit-node-exporter) | Prometheus node_exporter at a pinned, checksummed version |
+| [circuit-caddy](https://github.com/conn3xorg/circuit-caddy) | Caddy as a web server or reverse proxy, from a map of sites |
+| [circuit-postgres](https://github.com/conn3xorg/circuit-postgres) | PostgreSQL with settings, access rules, users and databases |
+| [circuit-podman](https://github.com/conn3xorg/circuit-podman) | Podman, with your containers run as systemd services through Quadlet |
+| [circuit-tailscale](https://github.com/conn3xorg/circuit-tailscale) | Tailscale, joined to your tailnet, with routes and exit nodes |
+| [circuit-fail2ban](https://github.com/conn3xorg/circuit-fail2ban) | Bans repeated SSH login failures, plus jails of your own |
+| [circuit-auto-updates](https://github.com/conn3xorg/circuit-auto-updates) | Automatic package updates with a reboot window |
 
 Wrote one of your own? [Share it](https://docs.conn3x.org/guides/share-a-circuit) and we'll list it on [conn3x.org/circuits](https://conn3x.org/circuits).
 
