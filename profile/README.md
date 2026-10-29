@@ -42,29 +42,24 @@ Run `conn3x plan` and you see the droplets it will create and the packages, file
 
 ## Circuits
 
-A circuit is a reusable setup for a set of hosts, versioned like any OpenTofu module. Add one `module` block, point it at your hosts, and plan. Each one here is tested on Ubuntu 24.04, Debian 13, Fedora 45 and Rocky Linux 10 on every change.
+A circuit is a reusable setup for a set of hosts, versioned like any OpenTofu module. Add one `module` block, point it at your hosts, and plan. Each one's page says what it was tested on; most run on Ubuntu 24.04, Debian 13, Fedora 45 and Rocky Linux 10 in CI on every change, and each has its own thread in [Discussions](https://github.com/conn3xorg/conn3x/discussions/categories/circuits).
 
-| | |
-| --- | --- |
-| [circuit-k3s](https://github.com/conn3xorg/circuit-k3s) | k3s servers and agents, HA with embedded etcd, Raspberry Pi OS |
-| [circuit-kubeadm](https://github.com/conn3xorg/circuit-kubeadm) | Upstream Kubernetes with kubeadm and containerd, HA control planes |
-| [circuit-docker](https://github.com/conn3xorg/circuit-docker) | Docker Engine from Docker's repository, Compose stacks from your config |
-| [circuit-monitoring](https://github.com/conn3xorg/circuit-monitoring) | Prometheus, Grafana and cAdvisor as one stack |
-| [circuit-firewall](https://github.com/conn3xorg/circuit-firewall) | Default-deny ufw or firewalld per host, keeping SSH open |
-| [circuit-baseline](https://github.com/conn3xorg/circuit-baseline) | Time zone, chrony, network sysctls and key-only SSH |
-| [circuit-users](https://github.com/conn3xorg/circuit-users) | Users, groups, SSH keys and sudo from one map |
-| [circuit-nginx](https://github.com/conn3xorg/circuit-nginx) | nginx with a site, a reload handler and an open firewall port |
-| [circuit-node-exporter](https://github.com/conn3xorg/circuit-node-exporter) | Prometheus node_exporter at a pinned, checksummed version |
-| [circuit-caddy](https://github.com/conn3xorg/circuit-caddy) | Caddy as a web server or reverse proxy, from a map of sites |
-| [circuit-postgres](https://github.com/conn3xorg/circuit-postgres) | PostgreSQL with settings, access rules, users and databases |
-| [circuit-podman](https://github.com/conn3xorg/circuit-podman) | Podman, with your containers run as systemd services through Quadlet |
-| [circuit-microshift](https://github.com/conn3xorg/circuit-microshift) | Single-node MicroShift from the microshift-io community build. Rocky Linux 10 only, tested by hand |
-| [circuit-tailscale](https://github.com/conn3xorg/circuit-tailscale) | Tailscale, joined to your tailnet, with routes and exit nodes |
-| [circuit-fail2ban](https://github.com/conn3xorg/circuit-fail2ban) | Bans repeated SSH login failures, plus jails of your own |
-| [circuit-auto-updates](https://github.com/conn3xorg/circuit-auto-updates) | Automatic package updates with a reboot window |
+There are 42 official circuits so far:
+
+- **Web and proxies:** [nginx](https://docs.conn3x.org/circuits/nginx), [Caddy](https://docs.conn3x.org/circuits/caddy), [HAProxy](https://docs.conn3x.org/circuits/haproxy), [Traefik](https://docs.conn3x.org/circuits/traefik), [certbot](https://docs.conn3x.org/circuits/certbot)
+- **Databases and caches:** [PostgreSQL](https://docs.conn3x.org/circuits/postgres), [MariaDB](https://docs.conn3x.org/circuits/mariadb), [Valkey](https://docs.conn3x.org/circuits/valkey), [OpenSearch](https://docs.conn3x.org/circuits/opensearch)
+- **Monitoring:** [node_exporter](https://docs.conn3x.org/circuits/node-exporter), [Prometheus](https://docs.conn3x.org/circuits/prometheus), [Grafana](https://docs.conn3x.org/circuits/grafana), [Monitoring stack](https://docs.conn3x.org/circuits/monitoring)
+- **Containers and Kubernetes:** [Docker](https://docs.conn3x.org/circuits/docker), [Podman](https://docs.conn3x.org/circuits/podman), [k3s](https://docs.conn3x.org/circuits/k3s), [kubeadm](https://docs.conn3x.org/circuits/kubeadm), [MicroShift](https://docs.conn3x.org/circuits/microshift)
+- **DNS:** [Pi-hole](https://docs.conn3x.org/circuits/pihole), [AdGuard Home](https://docs.conn3x.org/circuits/adguardhome), [Unbound](https://docs.conn3x.org/circuits/unbound), [BIND](https://docs.conn3x.org/circuits/bind)
+- **Networking and VPN:** [WireGuard](https://docs.conn3x.org/circuits/wireguard), [Tailscale](https://docs.conn3x.org/circuits/tailscale), [keepalived](https://docs.conn3x.org/circuits/keepalived)
+- **Security and compliance:** [Baseline](https://docs.conn3x.org/circuits/baseline), [Hardening](https://docs.conn3x.org/circuits/hardening), [Firewall](https://docs.conn3x.org/circuits/firewall), [fail2ban](https://docs.conn3x.org/circuits/fail2ban), [Automatic updates](https://docs.conn3x.org/circuits/auto-updates), [OpenSCAP](https://docs.conn3x.org/circuits/openscap)
+- **Storage and backup:** [Samba](https://docs.conn3x.org/circuits/samba), [NFS](https://docs.conn3x.org/circuits/nfs), [restic](https://docs.conn3x.org/circuits/restic)
+- **Identity and secrets:** [Users](https://docs.conn3x.org/circuits/users), [LLDAP](https://docs.conn3x.org/circuits/lldap), [Keycloak](https://docs.conn3x.org/circuits/keycloak), [OpenBao](https://docs.conn3x.org/circuits/openbao)
+- **AI:** [Ollama](https://docs.conn3x.org/circuits/ollama), [Qdrant](https://docs.conn3x.org/circuits/qdrant)
+- **Platforms:** [Proxmox VE](https://docs.conn3x.org/circuits/proxmox), [Forgejo](https://docs.conn3x.org/circuits/forgejo)
 
 Wrote one of your own? [Share it](https://docs.conn3x.org/guides/share-a-circuit) and we'll list it on [conn3x.org/circuits](https://conn3x.org/circuits).
 
 ## Get involved
 
-Questions and ideas go to [Discussions](https://github.com/conn3xorg/conn3x/discussions). If you'd like to send a fix, issues labelled [good first issue](https://github.com/conn3xorg/conn3x/labels/good%20first%20issue) and [help wanted](https://github.com/conn3xorg/conn3x/labels/help%20wanted) are a good place to start, and [CONTRIBUTING.md](https://github.com/conn3xorg/conn3x/blob/main/CONTRIBUTING.md) covers the rest. Found a security problem? Email security@conn3x.org rather than opening an issue.
+Questions and ideas go to [Discussions](https://github.com/conn3xorg/conn3x/discussions). If you'd like to send a fix, issues labelled [good first issue](https://github.com/search?q=org%3Aconn3xorg+label%3A%22good+first+issue%22+state%3Aopen&type=issues) and [help wanted](https://github.com/search?q=org%3Aconn3xorg+label%3A%22help+wanted%22+state%3Aopen&type=issues), across Conn3x and every circuit, are a good place to start, and [CONTRIBUTING.md](https://github.com/conn3xorg/conn3x/blob/main/CONTRIBUTING.md) covers the rest. Found a security problem? Email security@conn3x.org rather than opening an issue.
