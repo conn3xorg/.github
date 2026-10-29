@@ -1,0 +1,61 @@
+name: Bug report
+description: The circuit doesn't do what its README says it should.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. If it's a security problem, please don't file it here. See the [security policy](https://github.com/conn3xorg/.github/blob/main/SECURITY.md).
+  - type: input
+    id: circuit-version
+    attributes:
+      label: Circuit version
+      description: The tag or commit in your module's `source`.
+      placeholder: v0.2.0
+    validations:
+      required: true
+  - type: input
+    id: conn3x-version
+    attributes:
+      label: Conn3x version
+      description: Output of `conn3x version`.
+      placeholder: Conn3x v0.6.5 (built on OpenTofu v1.13.2)
+    validations:
+      required: true
+  - type: input
+    id: target
+    attributes:
+      label: Target host
+      description: Distro, version and architecture of the host the circuit configured.
+      placeholder: Ubuntu 24.04, arm64
+    validations:
+      required: true
+  - type: textarea
+    id: module
+    attributes:
+      label: Your module block
+      description: The `module` block that calls the circuit. Remove any secrets, keys and passwords first.
+      render: hcl
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Plan or apply output
+      description: The full output around the problem, including any error. Remove any secrets first.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected to happen
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead
+      description: For example, the service didn't start, or the second plan wasn't clean.
+    validations:
+      required: true

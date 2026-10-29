@@ -1,0 +1,27 @@
+name: Feature request
+description: An input, a behaviour or a distro you'd like this circuit to support.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Not sure it fits? Talk it through in [Conn3x Discussions](https://github.com/conn3xorg/conn3x/discussions) first.
+  - type: textarea
+    id: want
+    attributes:
+      label: What you'd like
+      description: The input, behaviour or distro you want. A `module` block showing how you'd call it helps a lot.
+    validations:
+      required: true
+  - type: textarea
+    id: use
+    attributes:
+      label: What you'd use it for
+      description: What you're setting up, and what gets in the way today.
+    validations:
+      required: true
+  - type: textarea
+    id: now
+    attributes:
+      label: How you handle it now
+      description: Workarounds, or how you'd do it by hand on the host.
