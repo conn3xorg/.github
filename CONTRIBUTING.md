@@ -116,6 +116,9 @@ submit it under the repo's license. There's no CLA, and you keep the
 copyright to your work. If you forgot, `git commit --amend -s` fixes the
 last commit, and `git rebase --signoff main` fixes all of them.
 
+A DCO check runs on every pull request and fails if any commit is missing
+its sign-off, so it's quickest to sign off as you go.
+
 Commit messages follow [Conventional Commits](https://www.conventionalcommits.org/):
 `feat:`, `fix:`, `docs:`, `test:`, `refactor:`, `ci:`, `chore:`. Keep the
 subject under 72 characters, and say what the problem was rather than only
