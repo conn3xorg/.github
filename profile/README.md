@@ -44,21 +44,22 @@ Run `conn3x plan` and you see the droplets it will create and the packages, file
 
 A circuit is a reusable setup for a set of hosts, versioned like any OpenTofu module. Add one `module` block, point it at your hosts, and plan. Each one's page says what it was tested on; most run on Ubuntu 24.04, Debian 13, Fedora 45 and Rocky Linux 10 in CI on every change, and each has its own thread in [Discussions](https://github.com/conn3xorg/conn3x/discussions/categories/circuits).
 
-There are 48 official circuits so far:
+There are 61 official circuits so far:
 
 - **Web and proxies:** [nginx](https://docs.conn3x.org/circuits/nginx), [Apache httpd](https://docs.conn3x.org/circuits/apache), [Caddy](https://docs.conn3x.org/circuits/caddy), [HAProxy](https://docs.conn3x.org/circuits/haproxy), [Traefik](https://docs.conn3x.org/circuits/traefik), [certbot](https://docs.conn3x.org/circuits/certbot)
-- **Databases and caches:** [PostgreSQL](https://docs.conn3x.org/circuits/postgres), [MariaDB](https://docs.conn3x.org/circuits/mariadb), [MySQL](https://docs.conn3x.org/circuits/mysql), [Valkey](https://docs.conn3x.org/circuits/valkey), [OpenSearch](https://docs.conn3x.org/circuits/opensearch)
-- **Monitoring:** [node_exporter](https://docs.conn3x.org/circuits/node-exporter), [Prometheus](https://docs.conn3x.org/circuits/prometheus), [Grafana](https://docs.conn3x.org/circuits/grafana), [Monitoring stack](https://docs.conn3x.org/circuits/monitoring)
+- **Databases and caches:** [PostgreSQL](https://docs.conn3x.org/circuits/postgres), [MariaDB](https://docs.conn3x.org/circuits/mariadb), [MySQL](https://docs.conn3x.org/circuits/mysql), [CouchDB](https://docs.conn3x.org/circuits/couchdb), [Valkey](https://docs.conn3x.org/circuits/valkey), [OpenSearch](https://docs.conn3x.org/circuits/opensearch)
+- **Monitoring:** [node_exporter](https://docs.conn3x.org/circuits/node-exporter), [Prometheus](https://docs.conn3x.org/circuits/prometheus), [Grafana](https://docs.conn3x.org/circuits/grafana), [Monitoring stack](https://docs.conn3x.org/circuits/monitoring), [Netdata](https://docs.conn3x.org/circuits/netdata), [OpenTelemetry Collector](https://docs.conn3x.org/circuits/otelcol)
 - **Containers and Kubernetes:** [Docker](https://docs.conn3x.org/circuits/docker), [Podman](https://docs.conn3x.org/circuits/podman), [k3s](https://docs.conn3x.org/circuits/k3s), [kubeadm](https://docs.conn3x.org/circuits/kubeadm), [MicroShift](https://docs.conn3x.org/circuits/microshift)
 - **DNS:** [Pi-hole](https://docs.conn3x.org/circuits/pihole), [AdGuard Home](https://docs.conn3x.org/circuits/adguardhome), [Unbound](https://docs.conn3x.org/circuits/unbound), [BIND](https://docs.conn3x.org/circuits/bind)
 - **Networking and VPN:** [WireGuard](https://docs.conn3x.org/circuits/wireguard), [Tailscale](https://docs.conn3x.org/circuits/tailscale), [keepalived](https://docs.conn3x.org/circuits/keepalived)
-- **Security and compliance:** [Baseline](https://docs.conn3x.org/circuits/baseline), [Hardening](https://docs.conn3x.org/circuits/hardening), [Firewall](https://docs.conn3x.org/circuits/firewall), [fail2ban](https://docs.conn3x.org/circuits/fail2ban), [Automatic updates](https://docs.conn3x.org/circuits/auto-updates), [OpenSCAP](https://docs.conn3x.org/circuits/openscap)
+- **Security and compliance:** [Baseline](https://docs.conn3x.org/circuits/baseline), [Hardening](https://docs.conn3x.org/circuits/hardening), [Firewall](https://docs.conn3x.org/circuits/firewall), [fail2ban](https://docs.conn3x.org/circuits/fail2ban), [Automatic updates](https://docs.conn3x.org/circuits/auto-updates), [OpenSCAP](https://docs.conn3x.org/circuits/openscap), [auditd](https://docs.conn3x.org/circuits/auditd)
 - **Storage and backup:** [Samba](https://docs.conn3x.org/circuits/samba), [NFS](https://docs.conn3x.org/circuits/nfs), [restic](https://docs.conn3x.org/circuits/restic)
-- **Identity and secrets:** [Users](https://docs.conn3x.org/circuits/users), [LLDAP](https://docs.conn3x.org/circuits/lldap), [Keycloak](https://docs.conn3x.org/circuits/keycloak), [OpenBao](https://docs.conn3x.org/circuits/openbao)
-- **AI:** [Ollama](https://docs.conn3x.org/circuits/ollama), [Qdrant](https://docs.conn3x.org/circuits/qdrant)
-- **Platforms:** [Proxmox VE](https://docs.conn3x.org/circuits/proxmox), [Forgejo](https://docs.conn3x.org/circuits/forgejo)
-- **Build and runtimes:** [Java](https://docs.conn3x.org/circuits/java), [Jenkins](https://docs.conn3x.org/circuits/jenkins)
+- **Identity and secrets:** [Users](https://docs.conn3x.org/circuits/users), [LLDAP](https://docs.conn3x.org/circuits/lldap), [Keycloak](https://docs.conn3x.org/circuits/keycloak), [OpenBao](https://docs.conn3x.org/circuits/openbao), [Infisical](https://docs.conn3x.org/circuits/infisical)
+- **AI:** [Ollama](https://docs.conn3x.org/circuits/ollama), [Qdrant](https://docs.conn3x.org/circuits/qdrant), [Agent box](https://docs.conn3x.org/circuits/agentbox)
+- **Platforms:** [Proxmox VE](https://docs.conn3x.org/circuits/proxmox), [Forgejo](https://docs.conn3x.org/circuits/forgejo), [GitLab CE](https://docs.conn3x.org/circuits/gitlab), [Cockpit](https://docs.conn3x.org/circuits/cockpit)
+- **Build and runtimes:** [Java](https://docs.conn3x.org/circuits/java), [PHP-FPM](https://docs.conn3x.org/circuits/php), [Jenkins](https://docs.conn3x.org/circuits/jenkins)
 - **Communication and media:** [Matrix Synapse](https://docs.conn3x.org/circuits/matrix), [Jellyfin](https://docs.conn3x.org/circuits/jellyfin)
+- **Detection and response:** [Suricata](https://docs.conn3x.org/circuits/suricata), [Zeek](https://docs.conn3x.org/circuits/zeek), [osquery](https://docs.conn3x.org/circuits/osquery), [Velociraptor](https://docs.conn3x.org/circuits/velociraptor)
 
 Wrote one of your own? [Share it](https://docs.conn3x.org/guides/share-a-circuit) and we'll list it on [conn3x.org/circuits](https://conn3x.org/circuits).
 
