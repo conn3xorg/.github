@@ -13,7 +13,7 @@
   <a href="https://github.com/conn3xorg/conn3x/discussions">Discussions</a>
 </p>
 
-Setting up a server usually takes two tools. Terraform or OpenTofu creates the machine, Ansible configures it, and an inventory file and a pile of glue scripts hold the two together. [Conn3x](https://github.com/conn3xorg/conn3x) does the whole job from one binary, with one plan and one state. It's built on OpenTofu, so the providers and modules you already use keep working.
+Setting up a server usually takes two tools. Terraform or OpenTofu creates the machine, Ansible configures it, and an inventory file and a pile of glue scripts hold the two together. [Conn3x](https://github.com/conn3xorg/conn3x) does the whole job from one binary, with one plan and one state. That makes it an IaCC tool: infrastructure as code and configuration management in one plan. It's built on OpenTofu, so the providers and modules you already use keep working.
 
 ```hcl
 circuit "web" {
