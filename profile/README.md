@@ -10,6 +10,7 @@
   <a href="https://docs.conn3x.org/get-started">Get started</a> ·
   <a href="https://conn3x.org/circuits">Circuits</a> ·
   <a href="https://conn3x.org/blog">Blog</a> ·
+  <a href="https://www.youtube.com/@conn3xlabs">YouTube</a> ·
   <a href="https://github.com/conn3xorg/conn3x/discussions">Discussions</a>
 </p>
 
