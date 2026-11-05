@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://conn3x.org/brand/conn3x-logo-dark-bg.svg">
-    <img alt="Conn3x" src="https://conn3x.org/brand/conn3x-logo-light-bg.svg" width="280">
+    <source media="(prefers-color-scheme: dark)" srcset="header-dark.svg">
+    <img alt="Conn3x: one plan for your cloud and the servers it creates." src="header-light.svg" width="100%">
   </picture>
 </p>
 
