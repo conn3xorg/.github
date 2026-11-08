@@ -37,7 +37,7 @@ Run `conn3x plan` and you see the droplets it will create and the packages, file
 
 ## Start here
 
-- **[conn3x](https://github.com/conn3xorg/conn3x)**: the binary. Linux and macOS, signed releases, `brew install conn3xorg/tap/conn3x`.
+- **[conn3x](https://github.com/conn3xorg/conn3x)**: the binary. Linux, macOS and Windows, signed releases, `brew install conn3xorg/tap/conn3x`.
 - **[Try it locally](https://docs.conn3x.org/tutorials/try-locally)**: a container stands in for a server, so you need no cloud account.
 - **[Coming from Ansible](https://docs.conn3x.org/guides/migrate-from-ansible)** or **[from Terraform](https://docs.conn3x.org/guides/migrate-from-terraform)**: what maps to what.
 
